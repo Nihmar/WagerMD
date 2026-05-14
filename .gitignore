@@ -21,6 +21,7 @@ backup/
 *.bak
 *.~*
 lib/
+bin/
 
 Thumbs.db
 .DS_Store

@@ -1,0 +1,10 @@
+object MainForm: TMainForm
+  Left = 342
+  Height = 240
+  Top = 31
+  Width = 320
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'WagerMD'
+  LCLVersion = '4.6.0.0'
+end
