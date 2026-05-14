@@ -1,2 +1,2 @@
 # WagerMD
-A FreePascal markdown editor (Obsidian clonw wannabe)
+A FreePascal markdown editor (Obsidian clone wannabe)
