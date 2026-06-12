@@ -3,8 +3,7 @@ object MainForm: TMainForm
   Height = 240
   Top = 31
   Width = 320
-  BorderIcons = []
-  BorderStyle = bsNone
+  BorderIcons = [biMinimize, biMaximize]
   Caption = 'WagerMD'
-  LCLVersion = '4.6.0.0'
+  LCLVersion = '4.8.0.0'
 end
