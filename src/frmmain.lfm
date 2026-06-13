@@ -1,9 +1,62 @@
 object MainForm: TMainForm
   Left = 342
-  Height = 240
+  Height = 600
   Top = 31
-  Width = 320
+  Width = 800
   BorderIcons = [biMinimize, biMaximize]
   Caption = 'WagerMD'
+  ClientHeight = 570
+  ClientWidth = 800
+  Menu = mmEditor
   LCLVersion = '4.8.0.0'
+  OnShow = FormShow
+  object atedMain: TATSynEdit
+    Left = 0
+    Height = 570
+    Top = 0
+    Width = 800
+    Align = alClient
+    DoubleBuffered = False
+    Font.Height = -12
+    Font.Name = 'Courier New'
+    ParentFont = False
+    TabOrder = 0
+    TabStop = True
+    OptScrollStyleHorz = Hide
+    OptRulerVisible = False
+    OptMinimapHiliteLinesWithSelection = False
+    OptWrapMode = AtWindowOrMargin
+    OptWrapEnabledForMaxLines = 80
+    OptUnprintedSpaces = False
+    OptUnprintedEnds = False
+    OptUnprintedEndsDetails = False
+    OptUnprintedEof = False
+    OptShowGutterCaretBG = False
+  end
+  object mmEditor: TMainMenu
+    Left = 392
+    Top = 144
+    object lv1File: TMenuItem
+      Caption = 'File'
+      object lv2OpenFile: TMenuItem
+        Action = actOpenFile
+      end
+    end
+  end
+  object alMain: TActionList
+    Left = 592
+    Top = 192
+    object actOpenFile: TAction
+      Category = 'File'
+      Caption = 'Open...'
+      Hint = 'Open File (Ctrl+O)'
+      ShortCut = 16463
+      OnExecute = actOpenFileExecute
+    end
+  end
+  object dlgOpenFile: TOpenDialog
+    Filter = 'Markdown File|*.md'
+    Left = 576
+    Top = 296
+  end
 end

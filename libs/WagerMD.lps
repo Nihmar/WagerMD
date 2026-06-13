@@ -2,13 +2,13 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="12"/>
-    <BuildModes Active="Release"/>
+    <BuildModes Active="Debug"/>
     <Units>
       <Unit>
         <Filename Value="WagerMD.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="44" Y="17"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,13 +20,46 @@
         <UnitName Value="frmMain"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="45" Y="17"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="49"/>
+        <CursorPos X="48" Y="62"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="../src/catpuccincolors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CatpuccinColors"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="5" Y="68"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../.lazarus/onlinepackagemanager/packages/ATSynEdit/atsynedit/atsynedit.pas"/>
+        <UnitName Value="ATSynEdit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1742"/>
+        <CursorPos X="15" Y="1759"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../.lazarus/onlinepackagemanager/packages/ATSynEdit/atsynedit/atstrings.pas"/>
+        <UnitName Value="ATStrings"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="147"/>
+        <CursorPos X="52" Y="166"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../src/frmmain.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="26" Y="12"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
+    <JumpHistory HistoryIndex="21">
       <Position>
         <Filename Value="../src/frmmain.pas"/>
         <Caret Line="15" Column="3"/>
@@ -35,10 +68,101 @@
         <Filename Value="WagerMD.lpr"/>
         <Caret Line="27"/>
       </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="22" Column="35"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="26" Column="35"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="27" Column="35"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="28" Column="35"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="17" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="27" Column="42" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="28" Column="42" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="45" Column="11" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="34" Column="32" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="46" Column="22" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="46" Column="75" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="52" Column="75" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="36" Column="115" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="52" Column="70" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="29" Column="27" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="33" Column="65" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="58" Column="29" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="34" Column="20" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="90" Column="54" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/frmmain.pas"/>
+        <Caret Line="76" Column="59" TopLine="53"/>
+      </Position>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../src/frmmain.pas"/>
+        <Line Value="60"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
 </CONFIG>

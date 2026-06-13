@@ -60,6 +60,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="atsynedit_package"/>
+      </Item>
+      <Item>
         <PackageName Value="LCL"/>
       </Item>
     </RequiredPackages>
@@ -75,6 +78,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="frmMain"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../src/catpuccincolors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CatpuccinColors"/>
       </Unit>
     </Units>
   </ProjectOptions>
