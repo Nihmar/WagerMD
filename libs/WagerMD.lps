@@ -7,8 +7,8 @@
       <Unit>
         <Filename Value="WagerMD.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="44" Y="17"/>
-        <UsageCount Value="22"/>
+        <CursorPos Y="17"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -18,21 +18,22 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="frmMain"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="49"/>
-        <CursorPos X="48" Y="62"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="28"/>
+        <CursorPos X="36" Y="58"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="../src/catpuccincolors.pas"/>
+        <Filename Value="../src/editorcolors.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="CatpuccinColors"/>
+        <UnitName Value="EditorColors"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="5" Y="68"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="224"/>
+        <CursorPos X="71" Y="253"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -58,95 +59,165 @@
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/lcl/controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1648"/>
+        <CursorPos X="14" Y="1669"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/lcl/include/control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1432"/>
+        <CursorPos X="31" Y="1450"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="1898"/>
+        <CursorPos X="18" Y="1932"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/fpc/src/rtl/objpas/math.pp"/>
+        <UnitName Value="Math"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/lib/lazarus/lcl/themes.pas"/>
+        <UnitName Value="Themes"/>
+        <EditorIndex Value="3"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="21">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="15" Column="3"/>
-      </Position>
-      <Position>
-        <Filename Value="WagerMD.lpr"/>
-        <Caret Line="27"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="247" Column="51" TopLine="208"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="22" Column="35"/>
+        <Caret Line="59" Column="26" TopLine="26"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="26" Column="35"/>
+        <Caret Line="64" TopLine="28"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="27" Column="35"/>
+        <Caret Line="58" Column="36" TopLine="28"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="28" Column="35"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="249" Column="37" TopLine="213"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="17" Column="15"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="239" Column="107" TopLine="215"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="27" Column="42" TopLine="9"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="237" Column="40" TopLine="215"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="28" Column="42" TopLine="9"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="247" Column="51" TopLine="215"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="45" Column="11" TopLine="9"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="249" TopLine="215"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="34" Column="32" TopLine="8"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="247" Column="53" TopLine="229"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="46" Column="22" TopLine="11"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="256" Column="57" TopLine="235"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="46" Column="75" TopLine="11"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="231" Column="30" TopLine="220"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="52" Column="75" TopLine="17"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="185" Column="20" TopLine="177"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="36" Column="115" TopLine="17"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="9" Column="10"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="52" Column="70" TopLine="16"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="248" Column="32" TopLine="224"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="29" Column="27" TopLine="13"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="230" Column="27" TopLine="214"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="33" Column="65" TopLine="14"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="327" Column="5" TopLine="287"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="58" Column="29" TopLine="46"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="322" Column="39" TopLine="287"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="34" Column="20" TopLine="25"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="258" Column="33" TopLine="222"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="90" Column="54" TopLine="74"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="251" Column="12" TopLine="223"/>
       </Position>
       <Position>
-        <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="76" Column="59" TopLine="53"/>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="250" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="246" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="248" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="249" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="250" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="246" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="243" Column="17" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="248" Column="28" TopLine="223"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="237" Column="48" TopLine="224"/>
+      </Position>
+      <Position>
+        <Filename Value="../src/editorcolors.pas"/>
+        <Caret Line="251" TopLine="227"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -160,8 +231,8 @@
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
-        <Source Value="../src/frmmain.pas"/>
-        <Line Value="60"/>
+        <Source Value="../src/editorcolors.pas"/>
+        <Line Value="250"/>
       </Item>
     </BreakPoints>
   </Debugging>

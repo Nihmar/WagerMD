@@ -80,9 +80,9 @@
         <UnitName Value="frmMain"/>
       </Unit>
       <Unit>
-        <Filename Value="../src/catpuccincolors.pas"/>
+        <Filename Value="../src/editorcolors.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="CatpuccinColors"/>
+        <UnitName Value="EditorColors"/>
       </Unit>
     </Units>
   </ProjectOptions>
