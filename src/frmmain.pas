@@ -7,6 +7,7 @@ interface
 uses
   Classes,
   SysUtils,
+  StrUtils,
   Forms,
   Controls,
   Graphics,
@@ -30,6 +31,8 @@ type
     mmEditor: TMainMenu;
     dlgOpenFile: TOpenDialog;
     procedure actOpenFileExecute(Sender: TObject);
+    procedure atedMainChange(Sender: TObject);
+    procedure atedMainChangeModified(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
   public
@@ -50,7 +53,21 @@ uses
 procedure TMainForm.actOpenFileExecute(Sender: TObject);
 begin
   if dlgOpenFile.Execute then
-    atedMain.LoadFromFile(dlgOpenFile.FileName, [TATLoadStreamOption.FromUTF8]);
+    begin
+      atedMain.LoadFromFile(dlgOpenFile.FileName, [TATLoadStreamOption.FromUTF8]);
+      Caption := dlgOpenFile.FileName;
+    end;
+end;
+
+procedure TMainForm.atedMainChange(Sender: TObject);
+begin
+  //
+end;
+
+procedure TMainForm.atedMainChangeModified(Sender: TObject);
+begin
+  if not EndsStr('*', Caption) then
+    Caption := Caption + '*';
 end;
 
 procedure TMainForm.FormShow(Sender: TObject);
@@ -58,7 +75,6 @@ var
   LColor: TColor;
   LRGB: TRGB;
 begin
-  // ApplyEditorColors(atedMain, PaletteMocha);
   LColor := Self.Color;
   LRGB := ColorToRGBRec(LColor);
   ApplyEditorColorsFromTheme(atedMain);

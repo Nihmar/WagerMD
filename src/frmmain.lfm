@@ -22,6 +22,8 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 0
     TabStop = True
+    OnChange = atedMainChange
+    OnChangeModified = atedMainChangeModified
     OptScrollStyleHorz = Hide
     OptRulerVisible = False
     OptMinimapHiliteLinesWithSelection = False
