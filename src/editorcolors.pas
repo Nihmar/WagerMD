@@ -5,7 +5,6 @@ unit EditorColors;
 interface
 
 uses
-  Math,
   Themes,
   Forms,
   ExtCtrls,

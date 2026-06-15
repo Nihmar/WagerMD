@@ -1,39 +1,67 @@
 object MainForm: TMainForm
   Left = 342
-  Height = 600
+  Height = 607
   Top = 31
-  Width = 800
+  Width = 1063
   BorderIcons = [biMinimize, biMaximize]
   Caption = 'WagerMD'
-  ClientHeight = 570
-  ClientWidth = 800
+  ClientHeight = 577
+  ClientWidth = 1063
   Menu = mmEditor
   LCLVersion = '4.8.0.0'
+  OnDestroy = FormDestroy
   OnShow = FormShow
-  object atedMain: TATSynEdit
+  object pnlMain: TPanel
     Left = 0
-    Height = 570
+    Height = 577
     Top = 0
-    Width = 800
+    Width = 1063
     Align = alClient
-    DoubleBuffered = False
-    Font.Height = -12
-    Font.Name = 'Courier New'
-    ParentFont = False
+    BevelOuter = bvNone
+    Caption = 'pnlMain'
+    ClientHeight = 577
+    ClientWidth = 1063
     TabOrder = 0
-    TabStop = True
-    OnChange = atedMainChange
-    OnChangeModified = atedMainChangeModified
-    OptScrollStyleHorz = Hide
-    OptRulerVisible = False
-    OptMinimapHiliteLinesWithSelection = False
-    OptWrapMode = AtWindowOrMargin
-    OptWrapEnabledForMaxLines = 80
-    OptUnprintedSpaces = False
-    OptUnprintedEnds = False
-    OptUnprintedEndsDetails = False
-    OptUnprintedEof = False
-    OptShowGutterCaretBG = False
+    object atedMain: TATSynEdit
+      Left = 328
+      Height = 577
+      Top = 0
+      Width = 735
+      Align = alClient
+      DoubleBuffered = False
+      Font.Height = -12
+      Font.Name = 'Courier New'
+      ParentFont = False
+      TabOrder = 0
+      TabStop = True
+      OnKeyUp = atedMainKeyUp
+      OnChange = atedMainChange
+      OnChangeDetailed = atedMainChangeDetailed
+      OnChangeModified = atedMainChangeModified
+      OnUndoTooLongLine = atedMainUndoTooLongLine
+      OptScrollStyleHorz = Hide
+      OptRulerVisible = False
+      OptMinimapHiliteLinesWithSelection = False
+      OptWrapMode = AtWindowOrMargin
+      OptWrapEnabledForMaxLines = 80
+      OptUnprintedSpaces = False
+      OptUnprintedEnds = False
+      OptUnprintedEndsDetails = False
+      OptUnprintedEof = False
+      OptShowGutterCaretBG = False
+    end
+    object tvFolder: TTreeView
+      Left = 0
+      Height = 577
+      Top = 0
+      Width = 328
+      Align = alLeft
+      ExpandSignType = tvestAngleBracket
+      SeparatorColor = clNone
+      TabOrder = 1
+      OnClick = tvFolderClick
+      OnDblClick = tvFolderDblClick
+    end
   end
   object mmEditor: TMainMenu
     Left = 392
@@ -42,6 +70,10 @@ object MainForm: TMainForm
       Caption = 'File'
       object lv2OpenFile: TMenuItem
         Action = actOpenFile
+      end
+      object MenuItem1: TMenuItem
+        Action = actOpenFolder
+        ShortCut = 24655
       end
     end
   end
@@ -55,10 +87,19 @@ object MainForm: TMainForm
       ShortCut = 16463
       OnExecute = actOpenFileExecute
     end
+    object actOpenFolder: TAction
+      Category = 'File'
+      Caption = 'Open folder'
+      OnExecute = actOpenFolderExecute
+    end
   end
   object dlgOpenFile: TOpenDialog
     Filter = 'Markdown File|*.md'
     Left = 576
     Top = 296
+  end
+  object dlgOpenFolder: TSelectDirectoryDialog
+    Left = 314
+    Top = 345
   end
 end

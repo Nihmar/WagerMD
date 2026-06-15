@@ -84,6 +84,10 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="EditorColors"/>
       </Unit>
+      <Unit>
+        <Filename Value="../src/treeviewloader.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
