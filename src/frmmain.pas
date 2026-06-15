@@ -46,16 +46,24 @@ type
     procedure atedMainChangeModified(Sender: TObject);
     procedure atedMainKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure atedMainUndoTooLongLine(Sender: TObject; ALineIndex: integer);
+    procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure tvFolderClick(Sender: TObject);
     procedure tvFolderDblClick(Sender: TObject);
   private
+    FLastOpenedFile: string;
+    FLastOpenedFolder: string;
     FLastSavedText: unicodestring;
     procedure HandleAfterEdit;
+    procedure LoadFile(AFileName: string);
+    procedure SetLastOpenedFile(AValue: string);
+    procedure SetLastOpenedFolder(AValue: string);
     procedure SetLastSavedText(AValue: unicodestring);
   protected
     property LastSavedText: unicodestring read FLastSavedText write SetLastSavedText;
+    property LastOpenedFile: string read FLastOpenedFile write SetLastOpenedFile;
+    property LastOpenedFolder: string read FLastOpenedFolder write SetLastOpenedFolder;
   public
   end;
 
@@ -74,19 +82,16 @@ uses
 procedure TMainForm.actOpenFileExecute(Sender: TObject);
 begin
   if dlgOpenFile.Execute then
-    begin
-    atedMain.LoadFromFile(dlgOpenFile.FileName, [TATLoadStreamOption.FromUTF8]);
-    LastSavedText := atedMain.Text;
-    Caption := dlgOpenFile.FileName;
-    end;
+    LoadFile(dlgOpenFile.FileName);
 end;
 
 procedure TMainForm.actOpenFolderExecute(Sender: TObject);
 begin
   if dlgOpenFolder.Execute then
-    begin
+  begin
+    LastOpenedFolder := dlgOpenFolder.FileName;
     PopulateTreeView(tvFolder, dlgOpenFolder.FileName);
-    end;
+  end;
 end;
 
 procedure TMainForm.atedMainChange(Sender: TObject);
@@ -115,6 +120,11 @@ begin
   HandleAfterEdit;
 end;
 
+procedure TMainForm.FormCreate(Sender: TObject);
+begin
+  //to fill
+end;
+
 procedure TMainForm.FormDestroy(Sender: TObject);
 begin
   FreeTreeViewData(tvFolder);
@@ -127,12 +137,31 @@ end;
 
 procedure TMainForm.tvFolderClick(Sender: TObject);
 begin
-  //
+  //do not touch
 end;
 
 procedure TMainForm.tvFolderDblClick(Sender: TObject);
+var
+  LFolder: string;
+  LNode: TTreeNode;
+  LList: TStrings;
+  I: Integer;
 begin
-  //
+  LList := TStringList.Create;
+  try
+    LNode := tvFolder.Selected.Parent;
+    while Assigned(LNode.Parent) do
+      begin
+        LList.Add(LNode.Text);
+        LNode := LNode.Parent;
+      end;
+    LFolder := LastOpenedFolder;
+    for I:=LList.Count-1 downto 0 do
+      LFolder := LFolder + DirectorySeparator + LList[I];
+    LoadFile(LFolder + DirectorySeparator + tvFolder.Selected.Text);
+  finally
+    LList.Free;
+  end;
 end;
 
 procedure TMainForm.HandleAfterEdit;
@@ -141,7 +170,27 @@ begin
   if (not EndsStr('*', Caption)) and atedMain.Modified then
     Caption := Caption + '*'
   else if EndsStr('*', Caption) and (not atedMain.Modified) then
-      Caption := Copy(Caption, 1, Length(Caption) - 2);
+    Caption := Copy(Caption, 1, Length(Caption) - 2);
+end;
+
+procedure TMainForm.LoadFile(AFileName: string);
+begin
+  atedMain.LoadFromFile(AFileName, [TATLoadStreamOption.FromUTF8]);
+  LastSavedText := atedMain.Text;
+  LastOpenedFile := AFileName;
+  Caption := AFileName;
+end;
+
+procedure TMainForm.SetLastOpenedFile(AValue: string);
+begin
+  if FLastOpenedFile = AValue then Exit;
+  FLastOpenedFile := AValue;
+end;
+
+procedure TMainForm.SetLastOpenedFolder(AValue: string);
+begin
+  if FLastOpenedFolder = AValue then Exit;
+  FLastOpenedFolder := AValue;
 end;
 
 procedure TMainForm.SetLastSavedText(AValue: unicodestring);

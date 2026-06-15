@@ -8,22 +8,23 @@ object MainForm: TMainForm
   ClientWidth = 1063
   Menu = mmEditor
   LCLVersion = '4.6.0.0'
+  OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   object pnlMain: TPanel
     Left = 0
-    Height = 577
+    Height = 607
     Top = 0
     Width = 1063
     Align = alClient
     BevelOuter = bvNone
     Caption = 'pnlMain'
-    ClientHeight = 577
+    ClientHeight = 607
     ClientWidth = 1063
     TabOrder = 0
     object atedMain: TATSynEdit
       Left = 328
-      Height = 577
+      Height = 607
       Top = 0
       Width = 735
       Align = alClient
@@ -51,13 +52,15 @@ object MainForm: TMainForm
     end
     object tvFolder: TTreeView
       Left = 0
-      Height = 577
+      Height = 607
       Top = 0
       Width = 328
       Align = alLeft
       ExpandSignType = tvestAngleBracket
+      ReadOnly = True
       SeparatorColor = clNone
       TabOrder = 1
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
       OnClick = tvFolderClick
       OnDblClick = tvFolderDblClick
     end
