@@ -18,8 +18,14 @@ uses
   ShellCtrls,
   ComCtrls,
   ATSynEdit,
+  ATSynEdit_Adapter_EControl,
+  econtrol_package,
+  ec_LexerList,
+  ec_syntax_format,
+  ec_SyntAnal,
   editorcolors,
-  treeviewloader, BGRABitmapTypes;
+  treeviewloader,
+  BGRABitmapTypes;
 
 type
 
@@ -52,18 +58,27 @@ type
     procedure tvFolderClick(Sender: TObject);
     procedure tvFolderDblClick(Sender: TObject);
   private
+    FAdapter: TATAdapterEControl;
     FLastOpenedFile: string;
     FLastOpenedFolder: string;
     FLastSavedText: unicodestring;
+    FLexer: TecSyntAnalyzer;
+    FLexerManager: TecLexerList;
     procedure HandleAfterEdit;
     procedure LoadFile(AFileName: string);
+    procedure SetAdapter(AValue: TATAdapterEControl);
     procedure SetLastOpenedFile(AValue: string);
     procedure SetLastOpenedFolder(AValue: string);
     procedure SetLastSavedText(AValue: unicodestring);
+    procedure SetLexer(AValue: TecSyntAnalyzer);
+    procedure SetLexerManager(AValue: TecLexerList);
   protected
     property LastSavedText: unicodestring read FLastSavedText write SetLastSavedText;
     property LastOpenedFile: string read FLastOpenedFile write SetLastOpenedFile;
     property LastOpenedFolder: string read FLastOpenedFolder write SetLastOpenedFolder;
+    property Adapter: TATAdapterEControl read FAdapter write SetAdapter;
+    property Lexer: TecSyntAnalyzer read FLexer write SetLexer;
+    property LexerManager: TecLexerList read FLexerManager write SetLexerManager;
   public
   end;
 
@@ -122,7 +137,19 @@ end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
-  //to fill
+  // 1. Create the adapter
+  Adapter := TATAdapterEControl.Create(Self);
+  Adapter.AddEditor(atedMain);
+
+  // 2. Create a lexer manager and load the Markdown lexer
+  LexerManager := TecLexerList.Create(Adapter);
+  Lexer := LexerManager.AddLexer;
+
+  // Replace this path with the actual path to your Markdown.lcf file
+  Lexer.LoadFromFile('Markdown.lcf');
+
+  // 3. Assign the loaded lexer to the adapter
+  Adapter.Lexer := Lexer;
 end;
 
 procedure TMainForm.FormDestroy(Sender: TObject);
@@ -145,18 +172,18 @@ var
   LFolder: string;
   LNode: TTreeNode;
   LList: TStrings;
-  I: Integer;
+  I: integer;
 begin
   LList := TStringList.Create;
   try
     LNode := tvFolder.Selected.Parent;
     while Assigned(LNode.Parent) do
-      begin
-        LList.Add(LNode.Text);
-        LNode := LNode.Parent;
-      end;
+    begin
+      LList.Add(LNode.Text);
+      LNode := LNode.Parent;
+    end;
     LFolder := LastOpenedFolder;
-    for I:=LList.Count-1 downto 0 do
+    for I := LList.Count - 1 downto 0 do
       LFolder := LFolder + DirectorySeparator + LList[I];
     LoadFile(LFolder + DirectorySeparator + tvFolder.Selected.Text);
   finally
@@ -181,6 +208,12 @@ begin
   Caption := AFileName;
 end;
 
+procedure TMainForm.SetAdapter(AValue: TATAdapterEControl);
+begin
+  if FAdapter = AValue then Exit;
+  FAdapter := AValue;
+end;
+
 procedure TMainForm.SetLastOpenedFile(AValue: string);
 begin
   if FLastOpenedFile = AValue then Exit;
@@ -197,6 +230,18 @@ procedure TMainForm.SetLastSavedText(AValue: unicodestring);
 begin
   if FLastSavedText = AValue then Exit;
   FLastSavedText := AValue;
+end;
+
+procedure TMainForm.SetLexer(AValue: TecSyntAnalyzer);
+begin
+  if FLexer = AValue then Exit;
+  FLexer := AValue;
+end;
+
+procedure TMainForm.SetLexerManager(AValue: TecLexerList);
+begin
+  if FLexerManager = AValue then Exit;
+  FLexerManager := AValue;
 end;
 
 end.
