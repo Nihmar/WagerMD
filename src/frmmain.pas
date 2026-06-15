@@ -206,7 +206,8 @@ begin
   atedMain.LoadFromFile(AFileName, [TATLoadStreamOption.FromUTF8]);
   LastSavedText := atedMain.Text;
   LastOpenedFile := AFileName;
-  Caption := AFileName;
+  Caption := StringReplace(ExtractFileName(AFileName), ExtractFileExt(AFileName),
+    '', [rfReplaceAll, rfIgnoreCase]);
 end;
 
 procedure TMainForm.SetAdapter(AValue: TATAdapterEControl);

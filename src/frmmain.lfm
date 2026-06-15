@@ -28,9 +28,9 @@ object MainForm: TMainForm
       Top = 0
       Width = 735
       Align = alClient
-      DoubleBuffered = False
+      DoubleBuffered = True
       Font.Height = -12
-      Font.Name = 'Courier New'
+      Font.Name = 'JetBrains Mono'
       ParentFont = False
       TabOrder = 0
       TabStop = True
