@@ -2,10 +2,10 @@ object MainForm: TMainForm
   Left = 342
   Height = 607
   Top = 31
-  Width = 1063
+  Width = 1049
   Caption = 'WagerMD'
   ClientHeight = 607
-  ClientWidth = 1063
+  ClientWidth = 1049
   Menu = mmEditor
   LCLVersion = '4.6.0.0'
   OnCreate = FormCreate
@@ -15,41 +15,13 @@ object MainForm: TMainForm
     Left = 0
     Height = 607
     Top = 0
-    Width = 1063
+    Width = 1049
     Align = alClient
     BevelOuter = bvNone
     Caption = 'pnlMain'
     ClientHeight = 607
-    ClientWidth = 1063
+    ClientWidth = 1049
     TabOrder = 0
-    object atedMain: TATSynEdit
-      Left = 370
-      Height = 607
-      Top = 0
-      Width = 693
-      Align = alClient
-      DoubleBuffered = True
-      Font.Height = -12
-      Font.Name = 'JetBrains Mono'
-      ParentFont = False
-      TabOrder = 0
-      TabStop = True
-      OnKeyUp = atedMainKeyUp
-      OnChange = atedMainChange
-      OnChangeDetailed = atedMainChangeDetailed
-      OnChangeModified = atedMainChangeModified
-      OnUndoTooLongLine = atedMainUndoTooLongLine
-      OptScrollStyleHorz = Hide
-      OptRulerVisible = False
-      OptMinimapHiliteLinesWithSelection = False
-      OptWrapMode = AtWindowOrMargin
-      OptWrapEnabledForMaxLines = 80
-      OptUnprintedSpaces = False
-      OptUnprintedEnds = False
-      OptUnprintedEndsDetails = False
-      OptUnprintedEof = False
-      OptShowGutterCaretBG = False
-    end
     object tvFolder: TTreeView
       Left = 42
       Height = 607
@@ -59,7 +31,7 @@ object MainForm: TMainForm
       ExpandSignType = tvestAngleBracket
       ReadOnly = True
       SeparatorColor = clNone
-      TabOrder = 1
+      TabOrder = 0
       Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
       OnClick = tvFolderClick
       OnDblClick = tvFolderDblClick
@@ -73,7 +45,7 @@ object MainForm: TMainForm
       BevelOuter = bvNone
       ClientHeight = 607
       ClientWidth = 42
-      TabOrder = 2
+      TabOrder = 1
       object BCSVGButton1: TBCSVGButton
         Left = 2
         Height = 38
@@ -105,11 +77,460 @@ object MainForm: TMainForm
         Position = 0
         Maximum = 0
       end
+      object BCSVGButton4: TBCSVGButton
+        Left = 2
+        Height = 38
+        Top = 42
+        Width = 38
+        Align = alTop
+        BorderSpacing.Around = 2
+        SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg role="img" style="color: rgb(74, 85, 101);" width="64" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 24 24" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">'#13#10'  <path d="M10 4a6 6 0 1 0 0 12a6 6 0 0 0 0-12m-8 6a8 8 0 1 1 14.32 4.906l5.387 5.387a1 1 0 0 1-1.414 1.414l-5.387-5.387A8 8 0 0 1 2 10" fill="currentColor"/>'#13#10'</svg>'#13#10
+        UseSVGAlignment = True
+        Color = clNone
+        ColorOpacity = 128
+        SVGNormalXML.Strings = (
+          '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="64" height="64" viewBox="0 0 24 24" style="color: rgb(74, 85, 101);"><path fill="currentColor" d="M10 4a6 6 0 1 0 0 12a6 6 0 0 0 0-12m-8 6a8 8 0 1 1 14.32 4.906l5.387 5.387a1 1 0 0 1-1.414 1.414l-5.387-5.387A8 8 0 0 1 2 10"></path></svg>'
+        )
+        SVGHoverXML.Strings = (
+          '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="64" height="64" viewBox="0 0 24 24" style="color: rgb(100, 150, 220);">'
+          '  <path fill="currentColor" d="M10 4a6 6 0 1 0 0 12a6 6 0 0 0 0-12m-8 6a8 8 0 1 1 14.32 4.906l5.387 5.387a1 1 0 0 1-1.414 1.414l-5.387-5.387A8 8 0 0 1 2 10"/>'
+          '</svg>'
+        )
+        SVGDownXML.Strings = (
+          '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="64" height="64" viewBox="0 0 24 24" style="color: rgb(25, 40, 70); transform: scale(0.92); transform-origin: center;">'
+          '  <path fill="currentColor" d="M10 4a6 6 0 1 0 0 12a6 6 0 0 0 0-12m-8 6a8 8 0 1 1 14.32 4.906l5.387 5.387a1 1 0 0 1-1.414 1.414l-5.387-5.387A8 8 0 0 1 2 10"/>'
+          '</svg>'
+        )
+        Position = 0
+        Maximum = 0
+      end
+    end
+    object pnEditor: TPanel
+      Left = 370
+      Height = 607
+      Top = 0
+      Width = 679
+      Align = alClient
+      BevelOuter = bvNone
+      Caption = 'pnEditor'
+      ClientHeight = 607
+      ClientWidth = 679
+      TabOrder = 2
+      object atedMain: TATSynEdit
+        Left = 0
+        Height = 556
+        Top = 28
+        Width = 679
+        Align = alClient
+        DoubleBuffered = True
+        Font.Height = -12
+        Font.Name = 'JetBrains Mono'
+        ParentFont = False
+        TabOrder = 0
+        TabStop = True
+        OnKeyUp = atedMainKeyUp
+        OnChange = atedMainChange
+        OnChangeDetailed = atedMainChangeDetailed
+        OnChangeModified = atedMainChangeModified
+        OnUndoTooLongLine = atedMainUndoTooLongLine
+        OptScrollStyleHorz = Hide
+        OptRulerVisible = False
+        OptMinimapHiliteLinesWithSelection = False
+        OptWrapMode = AtWindowOrMargin
+        OptWrapEnabledForMaxLines = 80
+        OptUnprintedSpaces = False
+        OptUnprintedEnds = False
+        OptUnprintedEndsDetails = False
+        OptUnprintedEof = False
+        OptShowGutterCaretBG = False
+      end
+      object pnEditorToolbar: TPanel
+        Left = 0
+        Height = 28
+        Top = 0
+        Width = 679
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 28
+        ClientWidth = 679
+        TabOrder = 1
+        object BCSVGButton2: TBCSVGButton
+          Left = 2
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton2'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton3: TBCSVGButton
+          Left = 28
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton3'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton5: TBCSVGButton
+          Left = 548
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton5'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton6: TBCSVGButton
+          Left = 340
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton6'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton7: TBCSVGButton
+          Left = 314
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton7'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton8: TBCSVGButton
+          Left = 288
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton8'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton9: TBCSVGButton
+          Left = 262
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton9'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton10: TBCSVGButton
+          Left = 236
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton10'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton11: TBCSVGButton
+          Left = 210
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton11'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton12: TBCSVGButton
+          Left = 184
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton12'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton13: TBCSVGButton
+          Left = 158
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton13'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton14: TBCSVGButton
+          Left = 132
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton14'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton15: TBCSVGButton
+          Left = 106
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton15'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton16: TBCSVGButton
+          Left = 80
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton16'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton17: TBCSVGButton
+          Left = 54
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton17'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton18: TBCSVGButton
+          Left = 652
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton18'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton20: TBCSVGButton
+          Left = 600
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton20'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton21: TBCSVGButton
+          Left = 444
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton21'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton22: TBCSVGButton
+          Left = 626
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton22'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton23: TBCSVGButton
+          Left = 574
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton23'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton24: TBCSVGButton
+          Left = 496
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton24'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton25: TBCSVGButton
+          Left = 392
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton25'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton26: TBCSVGButton
+          Left = 522
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton26'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton27: TBCSVGButton
+          Left = 470
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton27'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton28: TBCSVGButton
+          Left = 418
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton28'
+          Position = 0
+          Maximum = 0
+        end
+        object BCSVGButton29: TBCSVGButton
+          Left = 366
+          Height = 24
+          Top = 2
+          Width = 24
+          Align = alLeft
+          BorderSpacing.Around = 2
+          SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg width="100%" xmlns="http://www.w3.org/2000/svg" height="100%"/>'#13#10
+          Color = clWhite
+          ColorOpacity = 128
+          Caption = 'BCSVGButton29'
+          Position = 0
+          Maximum = 0
+        end
+      end
+      object StatusBar1: TStatusBar
+        Left = 0
+        Height = 23
+        Top = 584
+        Width = 679
+        Panels = <>
+      end
     end
   end
   object mmEditor: TMainMenu
-    Left = 392
-    Top = 144
+    Left = 72
+    Top = 64
     object lv1File: TMenuItem
       Caption = 'File'
       object lv2OpenFile: TMenuItem
@@ -128,8 +549,8 @@ object MainForm: TMainForm
     end
   end
   object alMain: TActionList
-    Left = 592
-    Top = 192
+    Left = 72
+    Top = 8
     object actOpenFile: TAction
       Category = 'File'
       Caption = 'Open...'
@@ -151,11 +572,11 @@ object MainForm: TMainForm
   end
   object dlgOpenFile: TOpenDialog
     Filter = 'Markdown File|*.md'
-    Left = 576
-    Top = 296
+    Left = 72
+    Top = 120
   end
   object dlgOpenFolder: TSelectDirectoryDialog
-    Left = 314
-    Top = 345
+    Left = 72
+    Top = 176
   end
 end

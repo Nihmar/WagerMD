@@ -20,8 +20,8 @@
         <UnitName Value="frmMain"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="16"/>
-        <CursorPos X="28" Y="26"/>
+        <TopLine Value="25"/>
+        <CursorPos X="28" Y="53"/>
         <UsageCount Value="36"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -175,123 +175,123 @@
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="71" Column="15" TopLine="57"/>
+        <Caret Line="28" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="199" Column="41" TopLine="233"/>
+        <Caret Line="27" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="200" Column="41" TopLine="200"/>
+        <Caret Line="28" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="199" Column="41" TopLine="199"/>
+        <Caret Line="27" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="206" Column="41" TopLine="206"/>
+        <Caret Line="26" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="199" Column="27" TopLine="175"/>
+        <Caret Line="27" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="69" Column="33" TopLine="48"/>
+        <Caret Line="26" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="70" Column="33" TopLine="49"/>
+        <Caret Line="27" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="71" Column="33" TopLine="50"/>
+        <Caret Line="28" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="72" Column="33" TopLine="51"/>
+        <Caret Line="29" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="71" Column="33" TopLine="50"/>
+        <Caret Line="30" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="70" Column="33" TopLine="49"/>
+        <Caret Line="31" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="71" Column="33" TopLine="50"/>
+        <Caret Line="32" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="70" Column="33" TopLine="49"/>
+        <Caret Line="33" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="54" Column="33" TopLine="33"/>
+        <Caret Line="34" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="55" Column="33" TopLine="34"/>
+        <Caret Line="35" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="54" Column="33" TopLine="33"/>
+        <Caret Line="36" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="55" Column="33" TopLine="34"/>
+        <Caret Line="37" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="54" Column="33" TopLine="33"/>
+        <Caret Line="38" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="53" Column="33" TopLine="32"/>
+        <Caret Line="39" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="54" Column="33" TopLine="32"/>
+        <Caret Line="40" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="53" Column="33" TopLine="32"/>
+        <Caret Line="41" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="54" Column="33" TopLine="33"/>
+        <Caret Line="42" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="55" Column="33" TopLine="34"/>
+        <Caret Line="46" Column="28" TopLine="16"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="54" Column="33" TopLine="33"/>
+        <Caret Line="50" Column="28" TopLine="21"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="55" Column="33" TopLine="34"/>
+        <Caret Line="54" Column="28" TopLine="25"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="56" Column="33" TopLine="35"/>
+        <Caret Line="53" Column="28" TopLine="25"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="55" Column="33" TopLine="34"/>
+        <Caret Line="52" Column="28" TopLine="25"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="56" Column="33" TopLine="34"/>
+        <Caret Line="53" Column="28" TopLine="25"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
-        <Caret Line="164" Column="62" TopLine="139"/>
+        <Caret Line="52" Column="28" TopLine="25"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -10,7 +10,7 @@ uses
   ATSynEdit_Adapter_EControl, econtrol_package, ec_LexerList, ec_syntax_format,
   ec_SyntAnal, editorcolors, treeviewloader, BGRABitmapTypes, BCSVGButton,
   BGRASVGImageList, BCImageButton, BGRASpeedButton, BGRACustomDrawn,
-  BGRAImageList, BCSVGViewer;
+  BGRAImageList, BCSVGViewer, BCToolBar, ATFlatToolbar, ATStatusBar;
 
 type
 
@@ -23,16 +23,46 @@ type
     alMain: TActionList;
     atedMain: TATSynEdit;
     BCSVGButton1: TBCSVGButton;
+    BCSVGButton10: TBCSVGButton;
+    BCSVGButton11: TBCSVGButton;
+    BCSVGButton12: TBCSVGButton;
+    BCSVGButton13: TBCSVGButton;
+    BCSVGButton14: TBCSVGButton;
+    BCSVGButton15: TBCSVGButton;
+    BCSVGButton16: TBCSVGButton;
+    BCSVGButton17: TBCSVGButton;
+    BCSVGButton18: TBCSVGButton;
+    BCSVGButton2: TBCSVGButton;
+    BCSVGButton20: TBCSVGButton;
+    BCSVGButton21: TBCSVGButton;
+    BCSVGButton22: TBCSVGButton;
+    BCSVGButton23: TBCSVGButton;
+    BCSVGButton24: TBCSVGButton;
+    BCSVGButton25: TBCSVGButton;
+    BCSVGButton26: TBCSVGButton;
+    BCSVGButton27: TBCSVGButton;
+    BCSVGButton28: TBCSVGButton;
+    BCSVGButton29: TBCSVGButton;
+    BCSVGButton3: TBCSVGButton;
+    BCSVGButton4: TBCSVGButton;
+    BCSVGButton5: TBCSVGButton;
+    BCSVGButton6: TBCSVGButton;
+    BCSVGButton7: TBCSVGButton;
+    BCSVGButton8: TBCSVGButton;
+    BCSVGButton9: TBCSVGButton;
     lv1File: TMenuItem;
     lv2OpenFile: TMenuItem;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
+    pnEditorToolbar: TPanel;
+    pnEditor: TPanel;
     pnTools: TPanel;
     Separator1: TMenuItem;
     mmEditor: TMainMenu;
     dlgOpenFile: TOpenDialog;
     dlgOpenFolder: TSelectDirectoryDialog;
     pnlMain: TPanel;
+    StatusBar1: TStatusBar;
     tvFolder: TTreeView;
     procedure actOpenFileExecute(Sender: TObject);
     procedure actOpenFolderExecute(Sender: TObject);
