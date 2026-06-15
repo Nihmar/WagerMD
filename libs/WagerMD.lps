@@ -20,8 +20,8 @@
         <UnitName Value="frmMain"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="117"/>
-        <CursorPos X="58" Y="132"/>
+        <TopLine Value="123"/>
+        <CursorPos X="45" Y="142"/>
         <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -35,13 +35,19 @@
         <UsageCount Value="28"/>
       </Unit>
       <Unit>
+        <Filename Value="../src/treeviewloader.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="27" Y="14"/>
+        <UsageCount Value="22"/>
+      </Unit>
+      <Unit>
         <Filename Value="../../../.lazarus/onlinepackagemanager/packages/ATSynEdit/atsynedit/atsynedit.pas"/>
         <UnitName Value="ATSynEdit"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="9481"/>
         <CursorPos X="3" Y="9487"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../../../.lazarus/onlinepackagemanager/packages/ATSynEdit/atsynedit/atstrings.pas"/>
@@ -101,15 +107,8 @@
         <CursorPos X="3" Y="3383"/>
         <UsageCount Value="10"/>
       </Unit>
-      <Unit>
-        <Filename Value="../src/treeviewloader.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="27" Y="14"/>
-        <UsageCount Value="22"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="26">
       <Position>
         <Filename Value="../src/frmmain.pas"/>
         <Caret Line="97" Column="59" TopLine="86"/>
@@ -149,10 +148,6 @@
       <Position>
         <Filename Value="../src/frmmain.pas"/>
         <Caret Line="75" Column="35" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="../../../.lazarus/onlinepackagemanager/packages/ATSynEdit/atsynedit/atsynedit.pas"/>
-        <Caret Line="1684" Column="14" TopLine="1666"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>
@@ -205,14 +200,6 @@
       <Position>
         <Filename Value="../src/frmmain.pas"/>
         <Caret Line="118" Column="22" TopLine="95"/>
-      </Position>
-      <Position>
-        <Filename Value="../../../.lazarus/onlinepackagemanager/packages/ATSynEdit/atsynedit/atsynedit.pas"/>
-        <Caret Line="1713" Column="14" TopLine="1695"/>
-      </Position>
-      <Position>
-        <Filename Value="../../../.lazarus/onlinepackagemanager/packages/ATSynEdit/atsynedit/atsynedit.pas"/>
-        <Caret Line="1470" Column="22" TopLine="1451"/>
       </Position>
       <Position>
         <Filename Value="../src/frmmain.pas"/>

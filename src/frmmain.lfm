@@ -3,12 +3,11 @@ object MainForm: TMainForm
   Height = 607
   Top = 31
   Width = 1063
-  BorderIcons = [biMinimize, biMaximize]
   Caption = 'WagerMD'
-  ClientHeight = 577
+  ClientHeight = 607
   ClientWidth = 1063
   Menu = mmEditor
-  LCLVersion = '4.8.0.0'
+  LCLVersion = '4.6.0.0'
   OnDestroy = FormDestroy
   OnShow = FormShow
   object pnlMain: TPanel

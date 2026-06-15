@@ -25,7 +25,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="../lib;$(ProjOutDir)"/>
-            <Libraries Value="/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/"/>
+            <Libraries Value="/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1"/>
             <OtherUnitFiles Value="../src"/>
             <UnitOutputDirectory Value="../lib/release/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
@@ -97,7 +97,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="../lib;$(ProjOutDir)"/>
-      <Libraries Value="/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/"/>
+      <Libraries Value="/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1"/>
       <OtherUnitFiles Value="../src"/>
       <UnitOutputDirectory Value="../lib/debug/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
