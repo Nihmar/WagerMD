@@ -10,8 +10,10 @@
       <UseXPManifest Value="True"/>
       <XPManifest>
         <DpiAware Value="True"/>
+        <LongPathAware Value="True"/>
+        <AnsiUTF8 Value="True"/>
         <TextName Value="org.Nihmar.WagerMD"/>
-        <TextDesc Value="A FreePascal markdown editor (Obsidian clone wannabe)"/>
+        <TextDesc Value="A FreePascal markdown editor"/>
       </XPManifest>
       <Icon Value="0"/>
     </General>
