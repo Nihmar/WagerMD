@@ -143,10 +143,11 @@ begin
 
   // 2. Create a lexer manager and load the Markdown lexer
   LexerManager := TecLexerList.Create(Adapter);
-  Lexer := LexerManager.AddLexer;
 
-  // Replace this path with the actual path to your Markdown.lcf file
-  Lexer.LoadFromFile('Markdown.lcf');
+  // Markdown
+  Lexer := LexerManager.AddLexer;
+  Lexer.LoadFromFile('lexers' + DirectorySeparator + 'Markdown' +
+    DirectorySeparator + 'Markdown.lcf');
 
   // 3. Assign the loaded lexer to the adapter
   Adapter.Lexer := Lexer;
