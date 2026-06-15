@@ -23,10 +23,10 @@ object MainForm: TMainForm
     ClientWidth = 1063
     TabOrder = 0
     object atedMain: TATSynEdit
-      Left = 328
+      Left = 370
       Height = 607
       Top = 0
-      Width = 735
+      Width = 693
       Align = alClient
       DoubleBuffered = True
       Font.Height = -12
@@ -51,7 +51,7 @@ object MainForm: TMainForm
       OptShowGutterCaretBG = False
     end
     object tvFolder: TTreeView
-      Left = 0
+      Left = 42
       Height = 607
       Top = 0
       Width = 328
@@ -63,6 +63,32 @@ object MainForm: TMainForm
       Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
       OnClick = tvFolderClick
       OnDblClick = tvFolderDblClick
+    end
+    object pnTools: TPanel
+      Left = 0
+      Height = 607
+      Top = 0
+      Width = 42
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 607
+      ClientWidth = 42
+      TabOrder = 2
+      object BCSVGButton1: TBCSVGButton
+        Left = 2
+        Height = 38
+        Top = 2
+        Width = 38
+        Align = alTop
+        BorderSpacing.Around = 2
+        SVGString = '<?xml version="1.0" encoding="utf-8"?>'#13#10'<svg role="img" style="color: rgb(74, 85, 101);" width="64" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 24 24" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">'#13#10'  <path d="M2 6a2 2 0 0 1 2-2h5a1 1 0 0 1 .707.293L11.414 6H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm6.586 0H4v12h16V8h-9a1 1 0 0 1-.707-.293z" fill="currentColor"/>'#13#10'</svg>'#13#10
+        UseSVGAlignment = True
+        Color = clNone
+        ColorOpacity = 128
+        OnClick = BCSVGButton1Click
+        Position = 0
+        Maximum = 0
+      end
     end
   end
   object mmEditor: TMainMenu

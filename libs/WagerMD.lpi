@@ -62,6 +62,12 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="bgracontrols"/>
+      </Item>
+      <Item>
+        <PackageName Value="AnchorDocking"/>
+      </Item>
+      <Item>
         <PackageName Value="econtrol_package"/>
       </Item>
       <Item>

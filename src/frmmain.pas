@@ -5,27 +5,12 @@ unit frmMain;
 interface
 
 uses
-  Classes,
-  SysUtils,
-  StrUtils,
-  Forms,
-  Controls,
-  Graphics,
-  Dialogs,
-  Menus,
-  ActnList,
-  ExtCtrls,
-  ShellCtrls,
-  ComCtrls,
-  ATSynEdit,
-  ATSynEdit_Adapter_EControl,
-  econtrol_package,
-  ec_LexerList,
-  ec_syntax_format,
-  ec_SyntAnal,
-  editorcolors,
-  treeviewloader,
-  BGRABitmapTypes;
+  Classes, SysUtils, StrUtils, Forms, Controls, Graphics, Dialogs, Menus,
+  ActnList, ExtCtrls, ShellCtrls, ComCtrls, Buttons, AnchorDockPanel, ATSynEdit,
+  ATSynEdit_Adapter_EControl, econtrol_package, ec_LexerList, ec_syntax_format,
+  ec_SyntAnal, editorcolors, treeviewloader, BGRABitmapTypes, BCSVGButton,
+  BGRASVGImageList, BCImageButton, BGRASpeedButton, BGRACustomDrawn,
+  BGRAImageList, BCSVGViewer;
 
 type
 
@@ -37,10 +22,12 @@ type
     actOpenFile: TAction;
     alMain: TActionList;
     atedMain: TATSynEdit;
+    BCSVGButton1: TBCSVGButton;
     lv1File: TMenuItem;
     lv2OpenFile: TMenuItem;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
+    pnTools: TPanel;
     Separator1: TMenuItem;
     mmEditor: TMainMenu;
     dlgOpenFile: TOpenDialog;
@@ -56,6 +43,7 @@ type
     procedure atedMainChangeModified(Sender: TObject);
     procedure atedMainKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure atedMainUndoTooLongLine(Sender: TObject; ALineIndex: integer);
+    procedure BCSVGButton1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -147,6 +135,11 @@ end;
 procedure TMainForm.atedMainUndoTooLongLine(Sender: TObject; ALineIndex: integer);
 begin
   HandleAfterEdit;
+end;
+
+procedure TMainForm.BCSVGButton1Click(Sender: TObject);
+begin
+  tvFolder.Visible := not tvFolder.Visible;
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
