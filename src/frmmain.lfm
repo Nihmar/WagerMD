@@ -86,6 +86,22 @@ object MainForm: TMainForm
         Color = clNone
         ColorOpacity = 128
         OnClick = BCSVGButton1Click
+        SVGNormalXML.Strings = (
+          '<?xml version="1.0" encoding="utf-8"?>'
+          '<svg role="img" style="color: rgb(74, 85, 101);" width="64" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 24 24" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">'
+          '  <path d="M2 6a2 2 0 0 1 2-2h5a1 1 0 0 1 .707.293L11.414 6H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm6.586 0H4v12h16V8h-9a1 1 0 0 1-.707-.293z" fill="currentColor"/>'
+          '</svg>'
+        )
+        SVGHoverXML.Strings = (
+          '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="64" height="64" viewBox="0 0 24 24" style="color: rgb(100, 150, 220);">'
+          '  <path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h5a1 1 0 0 1 .707.293L11.414 6H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm6.586 0H4v12h16V8h-9a1 1 0 0 1-.707-.293z"></path>'
+          '</svg>'
+        )
+        SVGDownXML.Strings = (
+          '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="64" height="64" viewBox="0 0 24 24" style="color: rgb(25, 40, 70); transform: scale(0.92); transform-origin: center;">'
+          '  <path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h5a1 1 0 0 1 .707.293L11.414 6H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm6.586 0H4v12h16V8h-9a1 1 0 0 1-.707-.293z"></path>'
+          '</svg>'
+        )
         Position = 0
         Maximum = 0
       end
