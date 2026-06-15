@@ -77,6 +77,12 @@ object MainForm: TMainForm
         Action = actOpenFolder
         ShortCut = 24655
       end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem2: TMenuItem
+        Action = actSaveFile
+      end
     end
   end
   object alMain: TActionList
@@ -93,6 +99,12 @@ object MainForm: TMainForm
       Category = 'File'
       Caption = 'Open folder'
       OnExecute = actOpenFolderExecute
+    end
+    object actSaveFile: TAction
+      Category = 'File'
+      Caption = 'Save...'
+      ShortCut = 16467
+      OnExecute = actSaveFileExecute
     end
   end
   object dlgOpenFile: TOpenDialog

@@ -32,6 +32,7 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
+    actSaveFile: TAction;
     actOpenFolder: TAction;
     actOpenFile: TAction;
     alMain: TActionList;
@@ -39,6 +40,8 @@ type
     lv1File: TMenuItem;
     lv2OpenFile: TMenuItem;
     MenuItem1: TMenuItem;
+    MenuItem2: TMenuItem;
+    Separator1: TMenuItem;
     mmEditor: TMainMenu;
     dlgOpenFile: TOpenDialog;
     dlgOpenFolder: TSelectDirectoryDialog;
@@ -46,6 +49,7 @@ type
     tvFolder: TTreeView;
     procedure actOpenFileExecute(Sender: TObject);
     procedure actOpenFolderExecute(Sender: TObject);
+    procedure actSaveFileExecute(Sender: TObject);
     procedure atedMainChange(Sender: TObject);
     procedure atedMainChangeDetailed(Sender: TObject;
       APos, APosEnd, AShift, APosAfter: TPoint);
@@ -106,6 +110,16 @@ begin
   begin
     LastOpenedFolder := dlgOpenFolder.FileName;
     PopulateTreeView(tvFolder, dlgOpenFolder.FileName);
+  end;
+end;
+
+procedure TMainForm.actSaveFileExecute(Sender: TObject);
+begin
+  if atedMain.Modified then
+  begin
+    atedMain.SaveToFile(LastOpenedFile);
+    LastSavedText := atedMain.Text;
+    HandleAfterEdit;
   end;
 end;
 
